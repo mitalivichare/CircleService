@@ -18,6 +18,7 @@ import com.stackroute.activitystream.model.Circle;
 @RestController
 public class CircleController {
 	
+	//use private variables -- general comment
 	@Autowired
 	CircleDAO circleDAO;
 	
@@ -45,6 +46,7 @@ public class CircleController {
 	{
 		try
 		{
+			//check whether circle exist with same id/name or not
 		circleDAO.createCircle(circle);
 		return new ResponseEntity<Circle>(circle,HttpStatus.OK);
 		}
@@ -58,6 +60,7 @@ public class CircleController {
 	{
 		try
 		{
+			//check whether circle exist with  id/name or not
 			circleDAO.updateCircle(circle);
 			return new ResponseEntity<Circle>(circle,HttpStatus.OK);
 		}
